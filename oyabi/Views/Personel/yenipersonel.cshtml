@@ -1,0 +1,24 @@
+﻿@model oyabi.Models.Personel
+@{
+    ViewData["Title"] = "yenipersonel";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+
+    <form class="form-group" method="post">
+        <b> @Html.LabelFor(x => x.personelad)</b>
+        @Html.TextBoxFor(x => x.personelad, new { @class = "form-control" })
+        <br />
+        <b> @Html.LabelFor(x => x.personelsoyad)</b>
+        @Html.TextBoxFor(x => x.personelsoyad, new { @class = "form-control" })
+        <br />
+        <b> @Html.LabelFor(x => x.personelsehir)</b>
+        @Html.TextBoxFor(x => x.personelsehir, new { @class = "form-control" })
+        <br />
+        <b> Departement</b>
+        @Html.DropDownListFor(x=>x.depar.ID,(List<SelectListItem>)ViewBag.dgr,new  {@class="form-control "  })
+        <br />
+        <button class="btn btn-info" >Ajouter Personel</button>
+
+    </form>
+
+

@@ -1,0 +1,17 @@
+﻿@model oyabi.Models.Departmalar
+@{
+    ViewData["Title"] = "departGetir";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+
+@using (Html.BeginForm("DepartemanGuncelle", "Depart", FormMethod.Post))
+{
+    <b>Departement ID</b>
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+
+    <b>@Html.LabelFor(x => x.DepartmanAD)</b>
+    @Html.TextBoxFor(x => x.DepartmanAD, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info" style="background-color:#ff00dc">UpDate Departement</button>
+}
+

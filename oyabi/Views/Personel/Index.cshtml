@@ -1,0 +1,37 @@
+﻿@using oyabi.Models;
+@model List<Personel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+
+
+
+
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>Şehir</th>
+        <th>DepartementId</th>
+        <th>Supprimer</th>
+        <th>Update</th>
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.personelad</td>
+            <td>@x.personelsoyad</td>
+            <td>@x.personelsehir</td>
+            <td>@x.depar.DepartmanAD</td>
+            <td><a href="/Depart/departsil/@x.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Depart/departGetir/@x.ID" class="btn btn-success">Update</a></td>
+        </tr>
+    }
+</table>
+<a href="/Personel/yenipersonel" class="btn btn-primary">Nouveau Personel</a>
+
+

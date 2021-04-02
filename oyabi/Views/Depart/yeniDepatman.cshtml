@@ -1,0 +1,14 @@
+﻿@model oyabi.Models.Departmalar
+@{
+    ViewData["Title"] = "yeniDepatman";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+<br />
+<form class="form-group" method="post">
+    <b> @Html.LabelFor(x => x.DepartmanAD)</b>
+    @Html.TextBoxFor(x=>x.DepartmanAD,new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ajouter Departement</button>
+
+</form>
+

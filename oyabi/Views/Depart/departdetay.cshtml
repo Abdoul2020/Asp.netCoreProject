@@ -1,0 +1,31 @@
+﻿@using oyabi.Models;
+@model List<Personel>
+
+
+@{
+    ViewData["Title"] = "departdetay";
+    Layout = "~/Views/Shared/_testLayout.cshtml";
+}
+<br />
+<h1>@ViewBag.dmr Departement</h1>
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>AD</th>
+        <th>SOYAD</th>
+        <th>Şehir</th>
+        
+    </tr>
+    @foreach (var x in Model)
+    {
+        <tr>
+            <td>@x.ID</td>
+            <td>@x.personelad</td>
+            <td>@x.personelsoyad</td>
+            <td>@x.personelsehir</td>
+           
+
+        </tr>
+    }
+</table>
